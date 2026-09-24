@@ -11,8 +11,6 @@ const port = 3001;
 
 // Get the MongoDB connection string from the .env file
 const uri = process.env.MONGO_URI;
-console.log(uri)
-console.log(!!process.env.MONGO_URI)
 // MIDDLEWARE
 const client = new MongoClient(uri);
 
