@@ -1,6 +1,7 @@
+require("dotenv").config();
 const express = require("express");
 const { MongoClient } = require("mongodb");
-require("dotenv").config();
+
 
 // Create the Express app
 const app = express();
@@ -10,7 +11,8 @@ const port = 3001;
 
 // Get the MongoDB connection string from the .env file
 const uri = process.env.MONGO_URI;
-
+console.log(uri)
+console.log(!!process.env.MONGO_URI)
 // MIDDLEWARE
 const client = new MongoClient(uri);
 
